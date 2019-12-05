@@ -25,10 +25,20 @@
                 <div class="recipe-title" title-id="">
                         <h2><a href={{videoLink}}>{{title}}</a></h2>
                 </div> 
-                <div class="jr"> {{jersey}}</div>
-                <img src="{{picture}}" alt="" class="picture-design">
-                <div class="pos">{{ingredients}}</div>
 
+                <div class="jr"> {{jersey}}</div>
+
+                <img src="{{picture}}" alt="" class="picture-design">
+                
+                
+
+                <div class="ingredient" >
+                    <ul>
+                        {{#each ingredients}}
+                        <li>- {{this}} </li>
+                        {{/each}}
+                    </ul>
+                </div>
             </div>
             
         </div>          

@@ -13,3 +13,11 @@ $("#ingredient-btn").on("click", function () {
     })
 
 })
+
+// 07 - img listner
+
+$("#container").on("click", ".picture-design" ,function(){
+    let firstIng = $(this).siblings(".ingredient").text()
+    // let firstIng = $(this).children("li.first")
+    console.log(firstIng)
+    })  
