@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="header">
+    <input type="text" id="ingredient-input" placeholder="Please enter ingredient">
+    <button id="ingredient-btn">Search</button>
+
+</div>
+
+    <div id="container"></div>
+
+        <script id="player-template" type="text/x-handlebars-template">
+            {{#each teamData}}
+        <div>
+        <div class="player-container">
+                <div class="player-name" player-id={{Id}}>{{firstName}} {{lastName}} </div>
+                <div class="jr"> {{jersey}}</div>
+                <img src="{{picture}}" alt="" class="picture-design">
+                <div class="pos">{{pos}}</div>
+
+            </div>
+            
+        </div>          
+
+         {{/each}}
+
+    </script>
+
+    </div>
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="renderer.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
