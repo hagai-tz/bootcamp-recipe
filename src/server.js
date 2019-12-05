@@ -26,10 +26,18 @@ app.get("/recipes/:ingredient", function (req, res) {
 
     request(`https://recipes-goodness.herokuapp.com/recipes/${ingredient}`, function (err, response) {
 
-        let recipe = JSON.parse(response.body)
-        console.log(recipe)
-        res.send(recipe)
+        const recipe = JSON.parse(response.body)
+
+        const recipeData = recipe.results.map(p => {
+            return {
+                title: p.title,
+                videoLink: p.href,
+                picture: p.thumbnail,
+                ingredients: p.ingredients
+            }
+        })
+
+        console.log(recipeData)
+        res.send(recipeData)
     })
 })
-
-

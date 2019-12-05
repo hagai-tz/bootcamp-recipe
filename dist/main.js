@@ -1,4 +1,4 @@
-
+const render = new Renderer 
 
 
 // 05 - Client Setup
@@ -8,6 +8,7 @@ $("#ingredient-btn").on("click", function () {
 
     $.get(`/recipes/${ingredientInput}`, function (ingredientRecipe) {
         console.log(ingredientRecipe)
+        render.renderIngredients(ingredientRecipe)
         // renderTeam(teamData)
     })
 

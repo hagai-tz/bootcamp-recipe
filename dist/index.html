@@ -18,14 +18,16 @@
 
     <div id="container"></div>
 
-        <script id="player-template" type="text/x-handlebars-template">
-            {{#each teamData}}
+        <script id="recipe-template" type="text/x-handlebars-template">
+            {{#each data}}
         <div>
-        <div class="player-container">
-                <div class="player-name" player-id={{Id}}>{{firstName}} {{lastName}} </div>
+        <div class="recipe-container">
+                <div class="recipe-title" title-id="">
+                        <h2><a href={{videoLink}}>{{title}}</a></h2>
+                </div> 
                 <div class="jr"> {{jersey}}</div>
                 <img src="{{picture}}" alt="" class="picture-design">
-                <div class="pos">{{pos}}</div>
+                <div class="pos">{{ingredients}}</div>
 
             </div>
             
