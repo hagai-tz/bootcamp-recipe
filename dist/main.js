@@ -14,10 +14,10 @@ $("#ingredient-btn").on("click", function () {
 
 })
 
-// 07 - img listner
+// 07 - img listner - not taking the first...
 
 $("#container").on("click", ".picture-design" ,function(){
     let firstIng = $(this).siblings(".ingredient").text()
-    // let firstIng = $(this).children("li.first")
+    // let firstIng = $(this).find(".ingredient").closest("li").text()
     console.log(firstIng)
     })  
